@@ -1,0 +1,175 @@
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+        
+        <style>
+            .icon {
+                height: 40px;
+                margin: 0 0 0 0 !important;
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none;
+                transform: translateY(5px)
+            }
+
+            .icon.icon-heading {
+                height: 50px;
+            }
+
+            .source {
+                font-size: 22px !important;
+                transform: translateY(-30px)
+            }
+        </style>
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+                <section>
+                    <h1>React Native</h1>
+                </section>
+
+                <section>
+                    <h2>Apa itu React Native ?</h2>
+                    <br/>
+                    <p>React Native adalah Framework Javascript yang dibuat oleh Facebook dan digunakan developer untuk membuat aplikasi mobile menggunakan javascript.</p>
+                    <p class="fragment">Finally <img class="icon" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f389.png" /></p>
+                </section>
+
+                <section>
+                    <h4>Keuntungan Menggunakan React Native</h4>
+                    <p class="fragment">(dibandingkan bahasa lain)</p>
+                    <br/>
+                    <ol>
+                        <li class="fragment">Cross Platform</li>
+                        <li class="fragment">Hot Reload <img class="icon" src="./icon/fire.png" /></li>
+                        <li class="fragment">Truly Native</li>
+                        <li class="fragment">Friendly for web developer <img class="icon" src="./icon/thumbs-up.png" /></li>
+                        <li class="fragment">A ton of packages on npm <img class="icon" src="./icon/package.png" ></li>
+                    </ol>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Cross Platform</h2>
+                        <q>Write once, run everywhere</q>
+                        <br/>
+                        <p>
+                            Dengan react native, para developer cukup menuliskan kode sekali untuk Ios dan android yang akan di<i>compile</i> ke Java / Objective-C
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>Hot Reload <img class="icon icon-heading" src="./icon/fire.png" /></h3>
+
+                        <img style="height: 500px;" src="./images/bouncingpreloader.gif" />
+                        <br />
+                        <p class="source"><i>source : <a href="https://github.com/sonnylazuardi/react-native-bouncing-preloader">https://github.com/sonnylazuardi/react-native-bouncing-preloader</a></i></p>
+                    </section>
+
+                    <section>
+                        <h2>Truly Native</h2>
+                        <p>Kebanyakan mobile apps yang dibangun dengan javascript menggunakan <u>cordova</u> / <u>ionic</u> hanyalah sebuah <i>webView</i>, berbeda dengan React Native yang di<i>compile</i> ke dalam bahasa native</p>
+                    </section>
+
+                    <section>
+                        <h3>Friendly for web developer <img class="icon icon-heading" src="./icon/thumbs-up.png" /></h3>
+                        <p>
+                            Sebenarnya, React Native memang ditujukan untuk para web developer yang ingin membuat mobile app dengan javascript. 
+                            <br/><br/>
+                            <span class="fragment">
+                                dan anda bisa memakai css disini <img class="icon" src="./icon/art.png" />
+                            </span>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>a ton of packages on npm <img class="icon icon-heading" src="./icon/package.png"/></h3>
+                        <img style="height: 500px; border: none" src="./images/packages-npm.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Terima Kasih</h2>
+
+                    <div class="fragment">
+                        <pre>
+                            <code>
+            if (you == "have question") {
+                console.log("kindly let we know");
+            }
+                            </code>
+                        </pre>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+
+
+        <script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: false,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+    </body>
+</html>
